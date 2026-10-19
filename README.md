@@ -67,7 +67,7 @@
 
 ## 7. Quadro do projeto
 
-- **GitHub Projects:** [link para o quadro do squad]
+- **GitHub Projects:** (https://github.com/users/jpalves7/projects/2)
 
 ## 8. Equipe
 
