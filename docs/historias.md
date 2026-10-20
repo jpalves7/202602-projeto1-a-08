@@ -30,3 +30,10 @@
 - [ ] A tela mostra em destaque "Você economizou R$ X este mês", em comparação com a conta sem a Bulbe.
 - [ ] Ao tocar em um item da fatura, a explicação dele abre ou fecha.
 - [ ] Ao clicar em "Pagar agora", o usuário é levado à tela de pagamento.
+
+### HU04
+- [ ] Ao abrir a tela, aparecem o valor e o vencimento carregados de fatura.json, além de quantos dias faltam para vencer.
+- [ ] Ao clicar em "Copiar código" do PIX, o código fictício é copiado e aparece "Código copiado!".
+- [ ] Ao escolher boleto, aparece a linha digitável fictícia com um botão para copiá-la.
+- [ ] Ao clicar em "Me lembre antes do vencimento", aparece a confirmação de que o lembrete foi ativado para 3 dias antes.
+- [ ] Quando faltam 3 dias ou menos para o vencimento, a tela mostra um alerta visual de vencimento próximo.
