@@ -16,3 +16,10 @@
 - [ ] Com um e-mail sem "@" ou sem domínio, ao clicar em "Confirmar", aparece "Digite um e-mail válido".
 - [ ] Sem canal reserva escolhido (e-mail ou SMS), ao clicar em "Confirmar", aparece um aviso pedindo a escolha.
 - [ ] Com todos os campos válidos, ao clicar em "Confirmar", aparece "Contatos confirmados!" e um botão para "Acompanhar minha ativação".
+
+### HU02
+- [ ] Ao abrir a tela, aparece uma linha do tempo com 4 etapas carregadas de `ativacao.json`: Contrato assinado, Pedido enviado à Cemig, Energia Bulbe ativa, 1ª fatura gerada.
+- [ ] As etapas concluídas aparecem marcadas como concluídas, com a data.
+- [ ] A etapa em andamento aparece destacada, com a data prevista e uma frase simples do que está acontecendo.
+- [ ] A tela mostra o aviso "Sua 1ª fatura está prevista para [data]".
+- [ ] Ao clicar em "Tenho uma dúvida", o usuário é levado à Central de dúvidas.
