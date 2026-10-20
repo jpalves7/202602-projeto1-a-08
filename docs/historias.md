@@ -1,12 +1,18 @@
 # Histórias de usuário
 
 > Entregável da aula 20. Cada história nasce de uma oportunidade do mapa de jornada e vira uma Issue com o label `historia`.
-
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como [persona], quero [ação] para [benefício]. | [ ] | [alta/média/baixa] | #[ ] |
-
+| HU01 | Como José, cliente novo que não está recebendo as mensagens da Bulbe, quero confirmar meu WhatsApp e meu e-mail e escolher um canal reserva para ter certeza de que vou receber os avisos sobre minha ativação e minha fatura. | Fase 2 (Boas-vindas): confirmar contatos e canal reserva — ~20% de falha na entrega por WhatsApp | alta | #[ ] |
+| HU02 | Como Lucas, cliente novo que ainda recebe conta da Cemig, quero ver em que etapa está a minha ativação e quando vem a minha 1ª fatura para não achar que a contratação deu errado durante a espera. | Fase 3 (Espera da ativação): linha do tempo da ativação — até 20 dias sem comunicação | alta | #[ ] |
+| HU03 | Como Ana Paula, cliente que recebeu a 1ª fatura da Bulbe, quero ver cada parte da fatura explicada em linguagem simples e quanto economizei para entender o que estou pagando e não achar que estou pagando duas vezes. | Fase 4 (Chegada da 1ª fatura): fatura explicada item por item — fatura difícil de entender | média | #[ ] |
+| HU04 | Como Mariana, cliente com a 1ª fatura aberta e renda variável, quero ver o valor, o vencimento e as formas de pagamento em um só lugar e ativar um lembrete para pagar sem atraso. | Fase 5 (Pagamento): PIX, boleto e lembrete — 32,4% de inadimplência na 1ª fatura | alta | #[ ] |
+| HU05 | Como Beatriz, cliente nova com dúvidas em cada etapa, quero encontrar respostas rápidas para as perguntas mais comuns do início para não ficar insegura e não deixar de pagar por falta de informação. | Transversal: central de dúvidas com busca — comunicação falha no onboarding | baixa | #[ ] |
 ## Critérios de aceite
 
 ### HU01
-- [ ] [critério verificável]
+- [ ] Ao abrir a tela, o WhatsApp e o e-mail aparecem preenchidos com os dados de `cliente.json`.
+- [ ] Com um WhatsApp de menos de 11 dígitos, ao clicar em "Confirmar", aparece "Digite um celular válido com DDD" e o formulário não é enviado.
+- [ ] Com um e-mail sem "@" ou sem domínio, ao clicar em "Confirmar", aparece "Digite um e-mail válido".
+- [ ] Sem canal reserva escolhido (e-mail ou SMS), ao clicar em "Confirmar", aparece um aviso pedindo a escolha.
+- [ ] Com todos os campos válidos, ao clicar em "Confirmar", aparece "Contatos confirmados!" e um botão para "Acompanhar minha ativação".
