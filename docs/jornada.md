@@ -26,6 +26,14 @@
 - *Medos e dúvidas:* "Caí em golpe?"; "Por que ainda recebo conta da Cemig?"; pensou em cancelar.
 - *Canais que usa:* WhatsApp e Instagram o dia todo; celular é o único aparelho.
 
+### 3. Ana Paula Rocha — HU03 Entender minha fatura · [Vitor Carrara]
+
+- *Nome e idade:* Ana Paula Rocha, 41 anos, professora da rede estadual, Contagem – MG
+- *Contexto:* conheceu a Bulbe por indicação de uma colega de trabalho e aderiu pelo site, pelo celular. Quando a 1ª fatura chegou, não entendeu os termos ("energia compensada", "créditos").
+- *Objetivo:* entender cada valor antes de pagar e confirmar que está economizando.
+- *Medos e dúvidas:* "Estou pagando a energia duas vezes, Bulbe e Cemig?"; não paga o que não entende.
+- *Canais que usa:* WhatsApp, e-mail e app do banco.
+
 
 ## Mapa
 
