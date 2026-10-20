@@ -10,13 +10,21 @@
 - **Medos e dúvidas:** [ ]
 - **Canais que usa:** [ ]
 
-### 1. José Almeida — HU01 Confirmar contatos · [Integrante 1]
+### 1. José Almeida — HU01 Confirmar contatos · [Pedro Paulo]
 
 - *Nome e idade:* José Almeida, 63 anos, aposentado, Betim – MG
 - *Contexto:* o filho contratou a Bulbe pelo celular para ele, depois de ver um anúncio de conta de luz mais barata. No cadastro, o filho colocou o próprio WhatsApp, e depois José ainda trocou de chip.
 - *Objetivo:* pagar menos de luz e receber os avisos no próprio celular, de um jeito simples.
 - *Medos e dúvidas:* "Ninguém me mandou nada, será que contratou mesmo?"; não sabe onde conferir ou corrigir o contato cadastrado.
 - *Canais que usa:* WhatsApp (pouco); ligação telefônica; não usa e-mail.
+
+### 2. Lucas Ferreira — HU02 Acompanhar ativação · [João Pedro Alves]
+
+- *Nome e idade:* Lucas Ferreira, 28 anos, entregador por aplicativo, Belo Horizonte – MG
+- *Contexto:* viu um anúncio da Bulbe no Instagram e contratou pelo celular em 5 minutos. Depois disso, ficou quase 3 semanas sem notícia, e a conta continuou vindo da Cemig.
+- *Objetivo:* saber em que pé está a contratação e quando o desconto começa.
+- *Medos e dúvidas:* "Caí em golpe?"; "Por que ainda recebo conta da Cemig?"; pensou em cancelar.
+- *Canais que usa:* WhatsApp e Instagram o dia todo; celular é o único aparelho.
 
 
 ## Mapa
