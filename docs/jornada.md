@@ -42,6 +42,13 @@
 - *Medos e dúvidas:* esquecer o vencimento; não ter o código de pagamento à mão; pagar multa.
 - *Canais que usa:* WhatsApp o dia todo e app do banco (PIX); quase não abre e-mail.
 
+### 5. Beatriz Lima — HU05 Central de dúvidas · [Integrante 5]
+
+- *Nome e idade:* Beatriz Lima, 22 anos, estudante universitária e estagiária, Belo Horizonte – MG
+- *Contexto:* contratou a Bulbe por indicação de uma amiga. É a primeira conta de luz no próprio nome.
+- *Objetivo:* tirar as dúvidas sozinha, rápido, sem precisar ligar para ninguém.
+- *Medos e dúvidas:* "Preciso cancelar a Cemig?"; "Quando vence?"; "E se eu mudar de apartamento?".
+- *Canais que usa:* WhatsApp, Instagram e busca no Google.
 
 ## Mapa
 
