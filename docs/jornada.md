@@ -42,7 +42,7 @@
 - *Medos e dúvidas:* esquecer o vencimento; não ter o código de pagamento à mão; pagar multa.
 - *Canais que usa:* WhatsApp o dia todo e app do banco (PIX); quase não abre e-mail.
 
-### 5. Beatriz Lima — HU05 Central de dúvidas · [Integrante 5]
+### 5. Beatriz Lima — HU05 Central de dúvidas · [João Pedro Lanna]
 
 - *Nome e idade:* Beatriz Lima, 22 anos, estudante universitária e estagiária, Belo Horizonte – MG
 - *Contexto:* contratou a Bulbe por indicação de uma amiga. É a primeira conta de luz no próprio nome.
