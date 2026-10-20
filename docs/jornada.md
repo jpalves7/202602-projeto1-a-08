@@ -34,6 +34,14 @@
 - *Medos e dúvidas:* "Estou pagando a energia duas vezes, Bulbe e Cemig?"; não paga o que não entende.
 - *Canais que usa:* WhatsApp, e-mail e app do banco.
 
+### 4. Mariana Souza — HU04 Pagar a 1ª fatura · [Pedro Coelho]
+
+- *Nome e idade:* Mariana Souza, 34 anos, cabeleireira autônoma, Contagem – MG
+- *Contexto:* viu um anúncio da Bulbe no Facebook e contratou pelo celular. A renda varia a cada mês, e a fatura nova da Bulbe não entrou na rotina dela.
+- *Objetivo:* pagar rápido e sem atraso, de preferência por PIX.
+- *Medos e dúvidas:* esquecer o vencimento; não ter o código de pagamento à mão; pagar multa.
+- *Canais que usa:* WhatsApp o dia todo e app do banco (PIX); quase não abre e-mail.
+
 
 ## Mapa
 
