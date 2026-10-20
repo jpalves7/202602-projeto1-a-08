@@ -37,3 +37,9 @@
 - [ ] Ao escolher boleto, aparece a linha digitável fictícia com um botão para copiá-la.
 - [ ] Ao clicar em "Me lembre antes do vencimento", aparece a confirmação de que o lembrete foi ativado para 3 dias antes.
 - [ ] Quando faltam 3 dias ou menos para o vencimento, a tela mostra um alerta visual de vencimento próximo.
+
+### HU05
+- [ ] Ao abrir a tela, aparecem as perguntas carregadas de faq.json, separadas por tema (Ativação, Fatura, Pagamento).
+- [ ] Ao clicar em uma pergunta, a resposta abre logo abaixo dela; ao clicar de novo, ela fecha.
+- [ ] Ao digitar uma palavra na busca, aparecem só as perguntas que contêm essa palavra.
+- [ ] Quando a busca não encontra nada, aparece "Não encontramos. Fale com a gente" com um contato fictício.
