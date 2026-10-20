@@ -23,3 +23,10 @@
 - [ ] A etapa em andamento aparece destacada, com a data prevista e uma frase simples do que está acontecendo.
 - [ ] A tela mostra o aviso "Sua 1ª fatura está prevista para [data]".
 - [ ] Ao clicar em "Tenho uma dúvida", o usuário é levado à Central de dúvidas.
+
+### HU03
+- [ ] Ao abrir a tela, aparecem os dados da fatura fictícia carregados de fatura.json: mês de referência, consumo (kWh), valor total e vencimento.
+- [ ] Cada item da fatura tem uma explicação curta em linguagem simples.
+- [ ] A tela mostra em destaque "Você economizou R$ X este mês", em comparação com a conta sem a Bulbe.
+- [ ] Ao tocar em um item da fatura, a explicação dele abre ou fecha.
+- [ ] Ao clicar em "Pagar agora", o usuário é levado à tela de pagamento.
