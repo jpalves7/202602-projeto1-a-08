@@ -54,10 +54,28 @@
 
 ![Mapa de jornada](wireframes/jornada.png)
 
+O mapa apresenta os principais momentos da experiência dos novos clientes da Bulbe Energia, relacionando suas dificuldades às oportunidades de melhoria identificadas pelo squad.
+
 | Fase | Ações | Pontos de contato | Pensamentos | Emoção | Dor (com evidência da Bulbe) | Oportunidade |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **1. Boas-vindas e confirmação de contatos — HU01** | O cliente realiza a contratação e tenta receber as primeiras comunicações. | Site, WhatsApp e telefone. | "Será que minha contratação foi concluída? Por que não recebi nenhuma mensagem?" | Insegurança e desconfiança. | Cerca de 20% de falha na entrega das mensagens pelo WhatsApp. | Permitir conferir e atualizar os contatos cadastrados e selecionar um canal alternativo. |
+| **2. Espera pela ativação — HU02** | O cliente acompanha o processo de ativação e aguarda o início dos benefícios. | Site, celular e WhatsApp. | "Por que ainda recebo a conta da Cemig? Minha contratação funcionou?" | Ansiedade e preocupação. | Clientes ficaram até 20 dias sem comunicação durante o onboarding. | Criar uma linha do tempo que apresente as etapas da ativação e a previsão da primeira fatura. |
+| **3. Recebimento da primeira fatura — HU03** | O cliente recebe a cobrança e tenta compreender os valores apresentados. | Fatura, site, e-mail e aplicativo bancário. | "Estou pagando duas vezes? O que significam esses créditos?" | Confusão e desconfiança. | A empresa identificou dificuldade dos clientes para compreender a primeira fatura. | Explicar a composição da cobrança em linguagem simples e destacar a economia obtida. |
+| **4. Pagamento da primeira fatura — HU04** | O cliente consulta o vencimento, escolhe uma forma de pagamento e organiza suas contas. | Site, Pix, boleto e aplicativo bancário. | "Quando preciso pagar? Onde encontro o código de pagamento?" | Preocupação e receio de atraso. | A inadimplência da primeira fatura chegou a 32,4%, contra 1,6% na carteira PF com mais de quatro meses. | Centralizar valor, vencimento e opções de pagamento e disponibilizar lembretes. |
+| **5. Esclarecimento de dúvidas durante a jornada — HU05** | O cliente procura respostas sobre ativação, fatura e pagamento. | Site, Central de Dúvidas e canais de atendimento. | "Preciso cancelar a Cemig? Quando vence? E se eu mudar de apartamento?" | Dúvida e insegurança. | As falhas de comunicação e a dificuldade de compreender o processo podem deixar o cliente sem informações importantes. | Criar uma Central de Dúvidas com categorias, perguntas expansíveis e ferramenta de pesquisa. |
 
-## Oportunidades registradas como Issues
+## Relação com as histórias de usuário
 
-- [ ] #[número] [título da oportunidade]
+As oportunidades identificadas foram transformadas em cinco histórias de usuário, documentadas no arquivo `docs/historias.md`.
+
+- **HU01:** Confirmação de contatos — Pedro Paulo.
+- **HU02:** Acompanhamento da ativação — João Pedro Alves.
+- **HU03:** Explicação da primeira fatura — Vitor Carrara.
+- **HU04:** Pagamento da primeira fatura — Pedro Coelho. Issue #8.
+- **HU05:** Central de Dúvidas — João Pedro Lanna. Issue #7.
+
+As histórias têm como objetivo melhorar a experiência inicial dos clientes, aumentar a clareza das informações e contribuir para o pagamento da primeira fatura.
+
+**Indicador principal:** inadimplência da primeira fatura.
+
+**Indicadores complementares:** entregabilidade das comunicações e retenção de novos clientes.
