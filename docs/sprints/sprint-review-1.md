@@ -4,7 +4,7 @@
 **Instituição:** Ibmec BH  
 **Turma:** A — Squad 08  
 **Sprint:** Sprint 1 — 12/10 a 23/10/2026  
-**Data da apresentação:** [Preencher]
+**Data da apresentação:** [22/10]
 
 ## 1. Objetivo da Sprint
 
