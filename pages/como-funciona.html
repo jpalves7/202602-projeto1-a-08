@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Como a Bulbe funciona</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/como-funciona.css">
+</head>
+<body class="app">
+
+  <!-- HU01 · Tela 1: como a Bulbe funciona (wireframe hu01-01) -->
+  <section id="tela-como-funciona" class="tela">
+    <header class="app-topo-escuro">
+      <button type="button" class="botao-icone" aria-label="Abrir menu">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <a href="../index.html" class="logo" aria-label="Bulbe, página inicial">
+        bulbe<span class="logo-tracos" aria-hidden="true"></span>
+      </a>
+      <div class="app-topo-acoes">
+        <button type="button" class="botao-icone" aria-label="Notificações">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        </button>
+        <span class="avatar" aria-label="José Almeida">JS</span>
+      </div>
+    </header>
+
+    <main class="app-conteudo app-conteudo-painel">
+      <h1 class="titulo">Olá, <span class="cliente-nome">José</span>!</h1>
+      <p class="subtitulo">Veja como a sua economia vai funcionar.</p>
+
+      <h2 class="secao-titulo">Você vai receber duas contas</h2>
+
+      <ol class="passos">
+        <li class="card card-com-icone">
+          <span class="icone-circulo">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polygon points="13,3 5,14 11,14 10,21 18,10 12,10"/></svg>
+          </span>
+          <div>
+            <p class="card-titulo">1. A conta Cemig continua</p>
+            <p class="card-texto">Chega como sempre, mas menor, por causa dos créditos da Bulbe.</p>
+          </div>
+        </li>
+        <li class="card card-com-icone">
+          <span class="icone-circulo">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+          </span>
+          <div>
+            <p class="card-titulo">2. A conta Bulbe chega separada</p>
+            <p class="card-texto">É o pagamento pela energia que gerou os seus créditos.</p>
+          </div>
+        </li>
+        <li class="card card-com-icone">
+          <span class="icone-circulo icone-circulo-verde">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>
+          </span>
+          <div>
+            <p class="card-titulo">3. Somando as duas, você paga menos</p>
+            <p class="card-texto">O total fica menor do que você pagava só para a Cemig.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="alerta">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,14"/></svg>
+        <p><strong>Quando começa?</strong> O primeiro desconto aparece em 1 a 3 meses, após a análise da distribuidora.</p>
+      </div>
+
+      <div class="acoes-fixas">
+        <button type="button" class="botao botao-primario" id="botao-ver-economia">
+          Ver minha economia
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
+        </button>
+        <!-- Ajustar o link quando a Central de Dúvidas (HU05) existir -->
+        <a href="central-de-duvidas.html" class="botao botao-secundario">Tenho uma dúvida</a>
+      </div>
+    </main>
+  </section>
+
+  <!-- HU01 · Tela 2: simulação da economia (wireframe hu01-02) -->
+  <section id="tela-economia" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-economia" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Sua economia</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
+
+    <main class="app-conteudo">
+      <h1 class="titulo">Quanto você vai pagar</h1>
+      <p class="subtitulo">Estimativa com base na sua conta média.</p>
+
+      <div class="card comparacao">
+        <p class="comparacao-linha">
+          <span><strong>Antes da Bulbe</strong> <small>· só Cemig</small></span>
+          <strong id="valor-antes">R$ 250,00</strong>
+        </p>
+        <div class="barra" aria-hidden="true">
+          <span class="barra-cemig" style="width: 100%"></span>
+        </div>
+      </div>
+
+      <div class="card comparacao">
+        <p class="comparacao-linha">
+          <span><strong>Com a Bulbe</strong> <small>· duas contas</small></span>
+          <strong id="valor-com-bulbe">R$ 212,50</strong>
+        </p>
+        <!-- Larguras proporcionais ao valor "antes": 40 / 250 = 16% e 172,50 / 250 = 69% -->
+        <div class="barra" aria-hidden="true">
+          <span class="barra-cemig" id="barra-cemig" style="width: 16%"></span>
+          <span class="barra-bulbe" id="barra-bulbe" style="width: 69%"></span>
+        </div>
+        <ul class="legenda">
+          <li><span class="legenda-cor barra-cemig"></span>Cemig <span id="valor-cemig">R$ 40,00</span></li>
+          <li><span class="legenda-cor barra-bulbe"></span>Bulbe <span id="valor-bulbe">R$ 172,50</span></li>
+        </ul>
+      </div>
+
+      <div class="caixa-sucesso economia">
+        <p class="economia-rotulo">Economia estimada</p>
+        <p class="economia-valor"><span id="valor-economia">R$ 37,50</span> <small>/mês</small></p>
+        <p class="economia-detalhe"><span id="percentual-economia">15%</span> a menos · cerca de <span id="economia-anual">R$ 450</span> por ano</p>
+      </div>
+
+      <div class="alerta">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><line x1="12" y1="8" x2="12" y2="8"/></svg>
+        <p><strong>Por que duas contas?</strong> A Cemig cobra a distribuição. A Bulbe cobra a energia que gerou o seu desconto.</p>
+      </div>
+
+      <p class="nota">Valores ilustrativos. A economia real depende do seu consumo.</p>
+
+      <div class="acoes-fixas">
+        <button type="button" class="botao botao-primario" id="botao-entendi">
+          Entendi, continuar
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
+        </button>
+      </div>
+    </main>
+  </section>
+
+  <!-- HU01 · Tela 3: confirmação de entendimento (wireframe hu01-03) -->
+  <section id="tela-confirmacao" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-confirmacao" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Confirmação</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
+
+    <main class="app-conteudo">
+      <h1 class="titulo">Ficou claro, <span class="cliente-nome">José</span>?</h1>
+      <p class="subtitulo">Marque o que você entendeu antes de seguir.</p>
+
+      <form id="form-entendimento" class="form-entendimento" novalidate>
+        <fieldset class="checklist">
+          <legend class="sr-only">O que você entendeu</legend>
+
+          <label class="check-card">
+            <input type="checkbox" name="entendimento" value="duas-contas">
+            <span class="check-caixa" aria-hidden="true"></span>
+            <span>
+              <span class="card-titulo">Vou receber duas contas</span>
+              <span class="card-texto">Uma da Cemig e uma da Bulbe.</span>
+            </span>
+          </label>
+
+          <label class="check-card">
+            <input type="checkbox" name="entendimento" value="pago-menos">
+            <span class="check-caixa" aria-hidden="true"></span>
+            <span>
+              <span class="card-titulo">Somando as duas, pago menos</span>
+              <span class="card-texto">Economia estimada de <span class="valor-economia">R$ 37,50</span> por mês.</span>
+            </span>
+          </label>
+
+          <label class="check-card">
+            <input type="checkbox" name="entendimento" value="prazo-desconto">
+            <span class="check-caixa" aria-hidden="true"></span>
+            <span>
+              <span class="card-titulo">O desconto começa em até 3 meses</span>
+              <span class="card-texto">Posso acompanhar cada etapa pelo app.</span>
+            </span>
+          </label>
+
+          <p class="erro" id="erro-entendimento" hidden>Marque os três itens para continuar.</p>
+        </fieldset>
+
+        <div class="ajuda">
+          <p>Ainda com dúvida?</p>
+          <a href="#" class="botao-atendimento">
+            <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg>
+            Atendimento
+          </a>
+        </div>
+
+        <div class="acoes-fixas">
+          <button type="submit" class="botao botao-primario">Confirmar e acompanhar ativação</button>
+        </div>
+      </form>
+    </main>
+  </section>
+
+  <!-- Barra de navegação inferior (igual em todos os wireframes) -->
+  <nav class="nav-inferior" aria-label="Navegação principal">
+    <a href="como-funciona.html" class="nav-item ativo" aria-current="page">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>
+      Início
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+      Fatura
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><line x1="12" y1="17" x2="12" y2="17"/></svg>
+      Dúvidas
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+      Perfil
+    </a>
+  </nav>
+
+</body>
+</html>
