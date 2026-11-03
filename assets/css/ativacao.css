@@ -1,0 +1,322 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f8f5;
+    color: #26352c;
+}
+
+/* CABEÇALHO */
+
+.header {
+    background-color: #ffffff;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e8eee9;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #247b45;
+}
+
+.logo span {
+    color: #a5cf39;
+}
+
+.voltar {
+    text-decoration: none;
+    color: #247b45;
+    font-weight: bold;
+}
+
+/* CONTEÚDO */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 45px auto;
+}
+
+.introducao {
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    color: #37864e;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.introducao h1 {
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.introducao p {
+    color: #68756c;
+    line-height: 1.6;
+}
+
+/* CARD DE PROGRESSO */
+
+.card-progresso {
+    background-color: white;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.titulo-progresso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.titulo-progresso h2 {
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.titulo-progresso p {
+    color: #7a867d;
+    font-size: 14px;
+}
+
+.status {
+    background-color: #e8f5eb;
+    color: #247b45;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* LINHA DO TEMPO */
+
+.timeline {
+    margin-left: 5px;
+}
+
+.etapa {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 38px;
+}
+
+.etapa:last-child {
+    padding-bottom: 0;
+}
+
+/* LINHA VERTICAL */
+
+.etapa:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 38px;
+    height: calc(100% - 38px);
+    width: 2px;
+    background-color: #dce5de;
+}
+
+.etapa.concluida:not(:last-child)::after {
+    background-color: #39965b;
+}
+
+/* MARCADORES */
+
+.marcador {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.concluida .marcador {
+    background-color: #39965b;
+    color: white;
+}
+
+.ativa .marcador {
+    background-color: #e8f5eb;
+    border: 2px solid #39965b;
+    color: #247b45;
+}
+
+.pendente .marcador {
+    background-color: #f1f3f1;
+    color: #89948b;
+}
+
+/* CONTEÚDO DAS ETAPAS */
+
+.conteudo-etapa {
+    padding-top: 5px;
+}
+
+.conteudo-etapa h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.conteudo-etapa p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #758078;
+    max-width: 570px;
+    margin-bottom: 9px;
+}
+
+.data {
+    display: block;
+    color: #8a958c;
+    font-size: 12px;
+}
+
+.concluida .conteudo-etapa h3 {
+    color: #247b45;
+}
+
+.ativa .conteudo-etapa h3 {
+    color: #247b45;
+}
+
+.tag-atual {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: #e8f5eb;
+    color: #247b45;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* AVISO DA PRIMEIRA FATURA */
+
+.aviso-fatura {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #eaf5e9;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.icone-fatura {
+    font-size: 27px;
+}
+
+.aviso-fatura h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.aviso-fatura strong {
+    display: block;
+    color: #247b45;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.aviso-fatura p {
+    font-size: 13px;
+    color: #68756c;
+    line-height: 1.5;
+}
+
+/* CENTRAL DE AJUDA */
+
+.ajuda {
+    text-align: center;
+    margin: 45px 0;
+}
+
+.ajuda h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.ajuda p {
+    color: #758078;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.botao-ajuda {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #27834b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.botao-ajuda:hover {
+    background-color: #1d663a;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #929c94;
+    font-size: 12px;
+    border-top: 1px solid #e8eee9;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+
+    .introducao h1 {
+        font-size: 25px;
+    }
+
+    .card-progresso {
+        padding: 22px 18px;
+    }
+
+    .titulo-progresso {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .aviso-fatura {
+        padding: 20px 15px;
+    }
+
+}
