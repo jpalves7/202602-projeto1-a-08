@@ -1,69 +1,76 @@
 
-document.addEventListener("DOMContentLoaded", () => {
-    carregarAtivacao();
-});
+// Aguarda o carregamento completo do HTML
+document.addEventListener("DOMContentLoaded", carregarAtivacao);
 
+
+// FUNÇÃO PRINCIPAL
 async function carregarAtivacao() {
+
     try {
+
         // Busca os dados do arquivo JSON
         const resposta = await fetch("../data/ativacao.json");
 
         if (!resposta.ok) {
-            throw new Error("Não foi possível carregar os dados da ativação.");
+            throw new Error("Erro ao buscar o arquivo JSON.");
         }
 
         const dados = await resposta.json();
 
-        // Atualiza a linha do tempo
+        // Exibe as etapas na tela
         exibirEtapas(dados.etapas);
 
-        // Atualiza a previsão da primeira fatura
+        // Exibe a previsão da primeira fatura
         exibirPrevisaoFatura(dados.primeira_fatura_prevista);
 
+        // Atualiza o status geral
+        atualizarStatusGeral(dados.etapas);
+
     } catch (erro) {
-        console.error("Erro ao carregar ativação:", erro);
+
+        console.error("Erro:", erro);
 
         const timeline = document.querySelector(".timeline");
 
         if (timeline) {
-            timeline.textContent = "Não foi possível carregar as informações da ativação. Tente novamente.";
+            timeline.textContent =
+                "Não foi possível carregar os dados da ativação.";
         }
     }
 }
 
 
-// EXIBE AS QUATRO ETAPAS DA ATIVAÇÃO
-
+// EXIBIR AS ETAPAS
 function exibirEtapas(etapas) {
+
     const timeline = document.querySelector(".timeline");
 
     if (!timeline) {
-        console.error("Elemento .timeline não encontrado.");
+        console.error("Linha do tempo não encontrada.");
         return;
     }
 
     if (!Array.isArray(etapas) || etapas.length !== 4) {
-        timeline.textContent = "Os dados da linha do tempo estão incompletos.";
-        return;
+        throw new Error("O JSON precisa conter exatamente quatro etapas.");
     }
 
-    // Limpa as etapas que estavam fixas no HTML
+    // Remove as etapas fixas do HTML
     timeline.replaceChildren();
 
     etapas.forEach((etapa, indice) => {
+
+        // Cria o elemento principal
         const elemento = document.createElement("div");
 
-        const status = normalizarStatus(etapa.status);
+        elemento.classList.add("etapa", etapa.status);
 
-        elemento.classList.add("etapa", status);
-
-        // Marcador da etapa
+        // Cria o marcador
         const marcador = document.createElement("div");
         marcador.classList.add("marcador");
 
         const numero = document.createElement("span");
 
-        if (status === "concluida") {
+        if (etapa.status === "concluida") {
             numero.textContent = "✓";
         } else {
             numero.textContent = indice + 1;
@@ -71,7 +78,7 @@ function exibirEtapas(etapas) {
 
         marcador.appendChild(numero);
 
-        // Conteúdo da etapa
+        // Cria o conteúdo
         const conteudo = document.createElement("div");
         conteudo.classList.add("conteudo-etapa");
 
@@ -84,18 +91,27 @@ function exibirEtapas(etapas) {
         const data = document.createElement("span");
         data.classList.add("data");
 
-        if (status === "concluida") {
-            data.textContent = "Concluído em: " + formatarData(etapa.data);
-        } else if (status === "ativa") {
-            data.textContent = "Previsão: " + formatarData(etapa.previsao);
+        // Define a informação de acordo com o status
+        if (etapa.status === "concluida") {
+
+            data.textContent =
+                "Concluído em: " + formatarData(etapa.data);
+
+        } else if (etapa.status === "ativa") {
+
+            data.textContent =
+                "Previsão: " + formatarData(etapa.previsao);
+
         } else {
+
             data.textContent = "Aguardando etapa anterior";
         }
 
         conteudo.append(titulo, descricao, data);
 
-        // Identifica a etapa atual
-        if (status === "ativa") {
+        // Destaca a etapa atual
+        if (etapa.status === "ativa") {
+
             const tag = document.createElement("span");
 
             tag.classList.add("tag-atual");
@@ -104,96 +120,66 @@ function exibirEtapas(etapas) {
             conteudo.appendChild(tag);
         }
 
+        // Junta os elementos
         elemento.append(marcador, conteudo);
+
         timeline.appendChild(elemento);
     });
-
-    atualizarStatusGeral(etapas);
 }
 
 
-// PADRONIZA OS STATUS
+// FORMATAR DATAS
+function formatarData(data) {
 
-function normalizarStatus(status) {
-    const valor = String(status || "")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/[\s-]+/g, "_");
-
-    if (["concluida", "concluido", "finalizada", "finalizado"].includes(valor)) {
-        return "concluida";
+    if (!data) {
+        return "A definir";
     }
 
-    if (["ativa", "em_andamento", "atual"].includes(valor)) {
-        return "ativa";
-    }
-
-    return "pendente";
+    // As datas do JSON já estão no formato DD/MM/AAAA
+    return data;
 }
 
 
-// ATUALIZA O STATUS GERAL
-
-function atualizarStatusGeral(etapas) {
-    const elementoStatus = document.querySelector(".status");
-
-    if (!elementoStatus) return;
-
-    const existeEtapaAtual = etapas.some(
-        etapa => normalizarStatus(etapa.status) === "ativa"
-    );
-
-    const todasConcluidas = etapas.every(
-        etapa => normalizarStatus(etapa.status) === "concluida"
-    );
-
-    if (todasConcluidas) {
-        elementoStatus.textContent = "Ativação concluída";
-    } else if (existeEtapaAtual) {
-        elementoStatus.textContent = "Em andamento";
-    } else {
-        elementoStatus.textContent = "Aguardando";
-    }
-}
-
-
-// EXIBE A PREVISÃO DA PRIMEIRA FATURA
-
+// EXIBIR PREVISÃO DA PRIMEIRA FATURA
 function exibirPrevisaoFatura(data) {
+
     const elemento = document.querySelector(".aviso-fatura strong");
 
     if (!elemento) {
-        console.error("Elemento da previsão da fatura não encontrado.");
         return;
     }
 
     elemento.textContent = formatarData(data);
-
-    const titulo = document.querySelector(".aviso-fatura h2");
-
-    if (titulo) {
-        titulo.textContent = "Sua 1ª fatura está prevista para:";
-    }
 }
 
 
-// FORMATA A DATA PARA DD/MM/AAAA
+// ATUALIZAR STATUS GERAL
+function atualizarStatusGeral(etapas) {
 
-function formatarData(data) {
-    if (!data) return "A definir";
+    const status = document.querySelector(".status");
 
-    // Mantém datas já formatadas
-    if (/^\d{2}\/\d{2}\/\d{4}$/.test(data)) {
-        return data;
+    if (!status) {
+        return;
     }
 
-    // Converte datas no padrão ISO
-    const partes = String(data).split("-");
+    const todasConcluidas = etapas.every(
+        etapa => etapa.status === "concluida"
+    );
 
-    if (partes.length === 3) {
-        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    const existeEtapaAtiva = etapas.some(
+        etapa => etapa.status === "ativa"
+    );
+
+    if (todasConcluidas) {
+
+        status.textContent = "Ativação concluída";
+
+    } else if (existeEtapaAtiva) {
+
+        status.textContent = "Em andamento";
+
+    } else {
+
+        status.textContent = "Aguardando";
     }
-
-    return data;
 }
