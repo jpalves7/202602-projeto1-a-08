@@ -1,322 +1,306 @@
+/* Estilos específicos da HU02 · Acompanhamento da ativação
+   Base (fonte, cores, topo, cards, botões, navegação) vem de style.css. */
 
-/* CONFIGURAÇÕES GERAIS */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --cor-laranja-fundo: #fff4e6;
+  --cor-laranja-trilho: #fde3bd;
+  --cor-laranja-texto: #d97706;
+  --cor-verde-escuro: #137a43;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f8f5;
-    color: #26352c;
+/* ---------- Tela 1: card de status ---------- */
+.card-status { padding: 1rem; }
+
+.status-rotulo {
+  margin: 0 0 0.75rem;
+  font-size: 0.75rem;
+  color: var(--cor-texto-apagado);
 }
 
-/* CABEÇALHO */
-
-.header {
-    background-color: #ffffff;
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e8eee9;
+.status-resumo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--cor-borda);
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-    color: #247b45;
+.status-titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cor-primaria);
+}
+.status-proximo {
+  margin: 0.125rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
 }
 
-.logo span {
-    color: #a5cf39;
+/* Anel de progresso (usa pathLength="100", então o traço é em porcentagem) */
+.anel {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+.anel svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.anel circle {
+  fill: none;
+  stroke-width: 6;
+}
+.anel-trilho { stroke: var(--cor-laranja-trilho); }
+.anel-progresso {
+  stroke: var(--cor-destaque);
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 25;
+  transition: stroke-dashoffset 0.4s ease;
+}
+.anel-texto {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cor-texto-suave);
 }
 
-.voltar {
-    text-decoration: none;
-    color: #247b45;
-    font-weight: bold;
+/* Linha do tempo */
+.linha-tempo {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-/* CONTEÚDO */
+.passo {
+  position: relative;
+  display: flex;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+}
+.passo:last-child { padding-bottom: 0; }
 
-.container {
-    width: 90%;
-    max-width: 850px;
-    margin: 45px auto;
+/* Linha que liga um marcador ao seguinte */
+.passo:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 0;
+  left: 11px;
+  width: 2px;
+  background: var(--cor-cinza-claro);
+}
+.passo.concluida:not(:last-child)::before { background: var(--cor-sucesso-borda); }
+
+.passo-marcador {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: #fff;
+}
+.passo-marcador .icone {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
+}
+.passo.concluida .passo-marcador { background: var(--cor-sucesso); }
+.passo.ativa .passo-marcador { background: var(--cor-destaque); }
+.passo.pendente .passo-marcador {
+  background: var(--cor-cinza-claro);
+  color: var(--cor-texto-apagado);
 }
 
-.introducao {
-    margin-bottom: 30px;
+.passo-titulo {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cor-primaria);
+}
+.passo-estado {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--cor-texto-apagado);
+}
+.passo.ativa .passo-estado {
+  font-weight: 500;
+  color: var(--cor-laranja-texto);
+}
+.passo.pendente .passo-titulo { color: var(--cor-texto-apagado); }
+
+/* Banner "Entenda como funciona nosso desconto" */
+.banner-desconto {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--raio);
+  background: var(--cor-primaria);
+  color: #fff;
+}
+.banner-pre {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.banner-titulo {
+  margin: 0 0 0.75rem;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.banner-botao {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  border-radius: 8px;
+  background: var(--cor-destaque);
+  color: var(--cor-primaria);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.banner-botao:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
 }
 
-.etiqueta {
-    color: #37864e;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
+.banner-ilustracao {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(8deg);
+}
+.banner-cartao {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 58px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--cor-destaque);
+  transform: rotate(-8deg);
+}
+.banner-cartao .icone {
+  width: 24px;
+  height: 24px;
 }
 
-.introducao h1 {
-    font-size: 32px;
-    margin: 12px 0;
+/* ---------- Tela 2: etapa atual ---------- */
+.selo-etapa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  align-self: flex-start;
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  background: var(--cor-laranja-fundo);
+  color: var(--cor-laranja-texto);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.selo-etapa .icone {
+  width: 14px;
+  height: 14px;
 }
 
-.introducao p {
-    color: #68756c;
-    line-height: 1.6;
+/* ---------- Tela 3: serviço ativado ---------- */
+.heroi-sucesso {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 170px;
+  margin-bottom: 1.5rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #2cb36a, #14894f);
 }
-
-/* CARD DE PROGRESSO */
-
-.card-progresso {
-    background-color: white;
-    padding: 35px;
-    border-radius: 14px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+.heroi-cartao {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 84px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
 }
-
-.titulo-progresso {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 35px;
+.heroi-check {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--cor-sucesso);
 }
-
-.titulo-progresso h2 {
-    font-size: 22px;
-    margin-bottom: 7px;
+.heroi-check .icone {
+  width: 26px;
+  height: 26px;
+  stroke-width: 3;
 }
-
-.titulo-progresso p {
-    color: #7a867d;
-    font-size: 14px;
+.heroi-raio {
+  position: absolute;
+  left: 18%;
+  bottom: 14%;
+  width: 20px;
+  height: 20px;
+  color: var(--cor-destaque);
 }
-
-.status {
-    background-color: #e8f5eb;
-    color: #247b45;
-    padding: 8px 13px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
+.faisca {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background:
+    linear-gradient(#fff, #fff) center / 100% 1.5px no-repeat,
+    linear-gradient(#fff, #fff) center / 1.5px 100% no-repeat;
+  opacity: 0.8;
 }
+.faisca-a { top: 14%; left: 8%; }
+.faisca-b { right: 8%; bottom: 22%; }
 
-/* LINHA DO TEMPO */
+.titulo-central,
+.subtitulo-central { text-align: center; }
+.titulo-central { font-size: 1.5rem; }
+.subtitulo-central { margin-bottom: 1.5rem; }
 
-.timeline {
-    margin-left: 5px;
+.etapas-concluidas { text-align: center; }
+.etapas-concluidas-titulo {
+  margin: 0 0 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cor-verde-escuro);
 }
-
-.etapa {
-    display: flex;
-    gap: 20px;
-    position: relative;
-    padding-bottom: 38px;
+.etapas-concluidas-lista {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
-
-.etapa:last-child {
-    padding-bottom: 0;
+.etapas-concluidas-lista li {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
-
-/* LINHA VERTICAL */
-
-.etapa:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 17px;
-    top: 38px;
-    height: calc(100% - 38px);
-    width: 2px;
-    background-color: #dce5de;
-}
-
-.etapa.concluida:not(:last-child)::after {
-    background-color: #39965b;
-}
-
-/* MARCADORES */
-
-.marcador {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    z-index: 1;
-}
-
-.concluida .marcador {
-    background-color: #39965b;
-    color: white;
-}
-
-.ativa .marcador {
-    background-color: #e8f5eb;
-    border: 2px solid #39965b;
-    color: #247b45;
-}
-
-.pendente .marcador {
-    background-color: #f1f3f1;
-    color: #89948b;
-}
-
-/* CONTEÚDO DAS ETAPAS */
-
-.conteudo-etapa {
-    padding-top: 5px;
-}
-
-.conteudo-etapa h3 {
-    font-size: 17px;
-    margin-bottom: 8px;
-}
-
-.conteudo-etapa p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #758078;
-    max-width: 570px;
-    margin-bottom: 9px;
-}
-
-.data {
-    display: block;
-    color: #8a958c;
-    font-size: 12px;
-}
-
-.concluida .conteudo-etapa h3 {
-    color: #247b45;
-}
-
-.ativa .conteudo-etapa h3 {
-    color: #247b45;
-}
-
-.tag-atual {
-    display: inline-block;
-    margin-top: 12px;
-    background-color: #e8f5eb;
-    color: #247b45;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-size: 10px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-/* AVISO DA PRIMEIRA FATURA */
-
-.aviso-fatura {
-    margin-top: 25px;
-    padding: 25px;
-    border-radius: 12px;
-    background-color: #eaf5e9;
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.icone-fatura {
-    font-size: 27px;
-}
-
-.aviso-fatura h2 {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.aviso-fatura strong {
-    display: block;
-    color: #247b45;
-    font-size: 26px;
-    margin-bottom: 8px;
-}
-
-.aviso-fatura p {
-    font-size: 13px;
-    color: #68756c;
-    line-height: 1.5;
-}
-
-/* CENTRAL DE AJUDA */
-
-.ajuda {
-    text-align: center;
-    margin: 45px 0;
-}
-
-.ajuda h2 {
-    font-size: 21px;
-    margin-bottom: 10px;
-}
-
-.ajuda p {
-    color: #758078;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.botao-ajuda {
-    display: inline-block;
-    padding: 14px 25px;
-    background-color: #27834b;
-    color: white;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-.botao-ajuda:hover {
-    background-color: #1d663a;
-}
-
-/* RODAPÉ */
-
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #929c94;
-    font-size: 12px;
-    border-top: 1px solid #e8eee9;
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 600px) {
-
-    .header {
-        padding: 18px 5%;
-    }
-
-    .container {
-        margin: 30px auto;
-    }
-
-    .introducao h1 {
-        font-size: 25px;
-    }
-
-    .card-progresso {
-        padding: 22px 18px;
-    }
-
-    .titulo-progresso {
-        align-items: flex-start;
-        gap: 12px;
-        flex-direction: column;
-    }
-
-    .aviso-fatura {
-        padding: 20px 15px;
-    }
-
+.etapas-concluidas-lista .icone {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
 }

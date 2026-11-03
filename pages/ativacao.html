@@ -1,140 +1,190 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acompanhe sua ativação | Bulbe Energia</title>
-    <link rel="stylesheet" href="../assets/css/ativacao.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Sua ativação</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/ativacao.css">
 </head>
+<body class="app">
 
-<body>
-
-    <header class="header">
-        <div class="logo">bulbe<span>.</span></div>
-        <a href="../index.html" class="voltar">Voltar ao início</a>
+  <!-- HU02 · Tela 1: acompanhamento (wireframe hu02-01) -->
+  <section id="tela-acompanhamento" class="tela">
+    <header class="app-topo-escuro">
+      <button type="button" class="botao-icone" aria-label="Abrir menu">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <a href="../index.html" class="logo" aria-label="Bulbe, página inicial">
+        bulbe<span class="logo-tracos" aria-hidden="true"></span>
+      </a>
+      <div class="app-topo-acoes">
+        <button type="button" class="botao-icone" aria-label="Notificações">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        </button>
+        <span class="avatar" id="avatar-iniciais" aria-label="Cliente">JS</span>
+      </div>
     </header>
 
-    <main class="container">
+    <main class="app-conteudo app-conteudo-painel">
+      <h1 class="titulo">Sua ativação</h1>
+      <p class="subtitulo">Veja o andamento do seu serviço Bulbe.</p>
 
-        <section class="introducao">
-            <span class="etiqueta">ACOMPANHAMENTO</span>
-            <h1>Estamos preparando tudo para você!</h1>
-            <p>
-                Olá, Lucas! Acompanhe abaixo cada etapa da sua ativação
-                e saiba quando sua primeira fatura estará disponível.
-            </p>
-        </section>
+      <p class="erro" id="erro-ativacao" role="alert" hidden></p>
 
-        <section class="card-progresso">
+      <section class="card card-status" aria-labelledby="status-titulo">
+        <p class="status-rotulo">Status da conexão</p>
 
-            <div class="titulo-progresso">
-                <div>
-                    <h2>Sua ativação</h2>
-                    <p>Acompanhe o andamento do seu processo.</p>
-                </div>
-                <span class="status">Em andamento</span>
-            </div>
+        <div class="status-resumo">
+          <div class="anel" role="img" aria-label="Progresso da ativação">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle class="anel-trilho" cx="32" cy="32" r="28" pathLength="100"/>
+              <circle class="anel-progresso" id="anel-progresso" cx="32" cy="32" r="28" pathLength="100"/>
+            </svg>
+            <span class="anel-texto" id="anel-texto">3/4</span>
+          </div>
+          <div>
+            <h2 class="status-titulo" id="status-titulo">Análise da distribuidora</h2>
+            <p class="status-proximo" id="status-proximo">Próximo: Serviço ativado</p>
+          </div>
+        </div>
 
-            <div class="timeline">
+        <ol class="linha-tempo" id="linha-tempo">
+          <!-- Montada por assets/js/ativacao.js a partir de data/ativacao.json -->
+        </ol>
+      </section>
 
-                <!-- ETAPA 1 -->
-                <div class="etapa concluida">
-                    <div class="marcador">
-                        <span>✓</span>
-                    </div>
+      <section class="banner-desconto" aria-label="Como funciona o desconto">
+        <div>
+          <p class="banner-pre">Entenda</p>
+          <p class="banner-titulo">como funciona<br>nosso desconto</p>
+          <a href="como-funciona.html" class="banner-botao">Saiba mais</a>
+        </div>
+        <span class="banner-ilustracao" aria-hidden="true">
+          <span class="banner-cartao">
+            <svg class="icone" viewBox="0 0 24 24"><polygon points="13,3 5,14 11,14 10,21 18,10 12,10"/></svg>
+          </span>
+        </span>
+      </section>
 
-                    <div class="conteudo-etapa">
-                        <h3>Contrato assinado</h3>
-                        <p>Seu contrato foi recebido e confirmado com sucesso.</p>
-                        <span class="data">Concluído em: 01/11/2026</span>
-                    </div>
-                </div>
-
-                <!-- ETAPA 2 -->
-                <div class="etapa ativa">
-                    <div class="marcador">
-                        <span>2</span>
-                    </div>
-
-                    <div class="conteudo-etapa">
-                        <h3>Pedido enviado à Cemig</h3>
-                        <p>
-                            Estamos aguardando a confirmação da Cemig
-                            para dar continuidade à sua ativação.
-                        </p>
-                        <span class="data">Previsão: 05/11/2026</span>
-                        <span class="tag-atual">ETAPA ATUAL</span>
-                    </div>
-                </div>
-
-                <!-- ETAPA 3 -->
-                <div class="etapa pendente">
-                    <div class="marcador">
-                        <span>3</span>
-                    </div>
-
-                    <div class="conteudo-etapa">
-                        <h3>Energia Bulbe ativa</h3>
-                        <p>
-                            Sua energia estará vinculada à Bulbe
-                            e você começará a aproveitar os benefícios.
-                        </p>
-                        <span class="data">Aguardando etapa anterior</span>
-                    </div>
-                </div>
-
-                <!-- ETAPA 4 -->
-                <div class="etapa pendente">
-                    <div class="marcador">
-                        <span>4</span>
-                    </div>
-
-                    <div class="conteudo-etapa">
-                        <h3>Primeira fatura gerada</h3>
-                        <p>
-                            Sua primeira fatura Bulbe será disponibilizada
-                            para que você possa acompanhar sua economia.
-                        </p>
-                        <span class="data">Aguardando ativação</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="aviso-fatura">
-            <div class="icone-fatura">⚡</div>
-
-            <div>
-                <h2>Sua primeira fatura está prevista para:</h2>
-                <strong>20/11/2026</strong>
-                <p>
-                    Você será informado quando sua fatura estiver disponível.
-                    Fique tranquilo, estamos acompanhando tudo!
-                </p>
-            </div>
-        </section>
-
-        <section class="ajuda">
-            <h2>Precisa de ajuda?</h2>
-            <p>
-                Sabemos que esse processo pode gerar dúvidas.
-                Estamos aqui para ajudar!
-            </p>
-
-            <a href="duvidas.html" class="botao-ajuda">
-                Tenho uma dúvida →
-            </a>
-        </section>
-
+      <div class="acoes-fixas">
+        <button type="button" class="botao botao-primario" id="botao-entender-etapa">
+          Entender etapa atual
+        </button>
+      </div>
     </main>
+  </section>
 
-    <footer>
-        <p>Bulbe Energia © 2026. Todos os direitos reservados.</p>
-    </footer>
+  <!-- HU02 · Tela 2: etapa atual (wireframe hu02-02) -->
+  <section id="tela-etapa-atual" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-etapa" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Etapa atual</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
 
-    <script src="../assets/js/ativacao.js"></script>
+    <main class="app-conteudo">
+      <p class="selo-etapa">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 15,14"/></svg>
+        <span id="selo-etapa-texto">Etapa 3 de 4</span>
+      </p>
+      <h1 class="titulo" id="etapa-titulo">Análise da distribuidora</h1>
+      <p class="subtitulo" id="etapa-subtitulo">Seu pedido está sendo processado.</p>
 
+      <div id="etapa-detalhes">
+        <!-- Cards montados por assets/js/ativacao.js -->
+      </div>
+
+      <div class="alerta">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="9" y1="3" x2="9" y2="7"/><line x1="15" y1="3" x2="15" y2="7"/></svg>
+        <p><strong>Prazo estimado:</strong> até <span id="etapa-prazo">60</span> dias. Avisaremos você assim que a etapa mudar.</p>
+      </div>
+
+      <div class="ajuda">
+        <p>Precisa de ajuda?</p>
+        <!-- Trocar "#" pelo contato real de atendimento quando existir -->
+        <a href="#" class="botao-atendimento">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2-1.8-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.8z"/></svg>
+          Atendimento
+        </a>
+      </div>
+    </main>
+  </section>
+
+  <!-- HU02 · Tela 3: serviço ativado (wireframe hu02-03) -->
+  <section id="tela-ativado" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-ativado" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Serviço ativado</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
+
+    <main class="app-conteudo">
+      <div class="heroi-sucesso" aria-hidden="true">
+        <span class="faisca faisca-a"></span>
+        <span class="faisca faisca-b"></span>
+        <svg class="heroi-raio icone" viewBox="0 0 24 24"><polygon points="13,3 5,14 11,14 10,21 18,10 12,10"/></svg>
+        <span class="heroi-cartao">
+          <span class="heroi-check">
+            <svg class="icone" viewBox="0 0 24 24"><polyline points="5,12 10,17 19,7"/></svg>
+          </span>
+        </span>
+      </div>
+
+      <h1 class="titulo titulo-central">Ativação concluída!</h1>
+      <p class="subtitulo subtitulo-central">Seu serviço Bulbe já está ativo.</p>
+
+      <div class="caixa-sucesso etapas-concluidas">
+        <p class="etapas-concluidas-titulo">Etapas concluídas</p>
+        <ul class="etapas-concluidas-lista">
+          <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>Cadastro</li>
+          <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>Explicação</li>
+          <li><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="5,12 10,17 19,7"/></svg>Ativação</li>
+        </ul>
+      </div>
+
+      <div class="ajuda">
+        <p>Precisa de ajuda?</p>
+        <a href="#" class="botao-atendimento">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2-1.8-1-.8.6c-.8-.4-1.5-1.1-1.9-1.9l.6-.8-1-1.8z"/></svg>
+          Atendimento
+        </a>
+      </div>
+
+      <div class="acoes-fixas">
+        <!-- Ajustar o link quando a primeira fatura (HU03) existir -->
+        <a href="primeira-fatura.html" class="botao botao-primario">
+          Conhecer minha primeira fatura
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
+        </a>
+      </div>
+    </main>
+  </section>
+
+  <!-- Barra de navegação inferior (igual em todos os wireframes) -->
+  <nav class="nav-inferior" aria-label="Navegação principal">
+    <a href="como-funciona.html" class="nav-item ativo" aria-current="page">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>
+      Início
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+      Fatura
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><line x1="12" y1="17" x2="12" y2="17"/></svg>
+      Dúvidas
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+      Perfil
+    </a>
+  </nav>
+
+  <script type="module" src="../assets/js/ativacao.js"></script>
 </body>
 </html>

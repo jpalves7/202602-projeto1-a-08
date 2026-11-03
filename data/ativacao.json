@@ -1,31 +1,42 @@
-
 {
-    "etapas": [
+  "cliente": {
+    "iniciais": "JS"
+  },
+  "etapas": [
+    {
+      "titulo": "Cadastro recebido",
+      "status": "concluida"
+    },
+    {
+      "titulo": "Serviço explicado",
+      "status": "concluida"
+    },
+    {
+      "titulo": "Análise da distribuidora",
+      "status": "ativa",
+      "prazoDias": 60,
+      "subtitulo": "Seu pedido está sendo processado.",
+      "detalhes": [
         {
-            "titulo": "Contrato assinado",
-            "status": "concluida",
-            "data": "01/11/2026",
-            "descricao": "Seu contrato foi recebido e confirmado com sucesso."
+          "icone": "raio",
+          "titulo": "O que acontece agora?",
+          "texto": "A distribuidora está analisando a solicitação de ativação do serviço."
         },
         {
-            "titulo": "Pedido enviado à Cemig",
-            "status": "ativa",
-            "previsao": "05/11/2026",
-            "descricao": "Estamos aguardando a confirmação da Cemig para dar continuidade à sua ativação."
+          "icone": "info",
+          "titulo": "Você não precisa solicitar novamente",
+          "texto": "Acompanhe o status até a confirmação."
         },
         {
-            "titulo": "Energia Bulbe ativa",
-            "status": "pendente",
-            "previsao": null,
-            "descricao": "Sua energia estará vinculada à Bulbe e você começará a aproveitar os benefícios."
-        },
-        {
-            "titulo": "1ª fatura gerada",
-            "status": "pendente",
-            "previsao": null,
-            "descricao": "Sua primeira fatura Bulbe será disponibilizada para acompanhamento."
+          "icone": "check",
+          "titulo": "Próximo passo",
+          "texto": "Serviço ativado e confirmação enviada."
         }
-    ],
-    "primeira_fatura_prevista": "20/11/2026"
+      ]
+    },
+    {
+      "titulo": "Serviço ativado",
+      "status": "pendente"
+    }
+  ]
 }
-
