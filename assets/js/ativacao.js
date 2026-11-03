@@ -105,9 +105,11 @@ function configurarNavegacao(temEtapaAtiva) {
   const botao = document.querySelector('#botao-entender-etapa');
   botao.hidden = !temEtapaAtiva;
   botao.addEventListener('click', () => mostrarTela('tela-etapa-atual'));
-
+  document.querySelector('#botao-ver-ativado').addEventListener('click', () => mostrarTela('tela-ativado'));  // NOVA LINHA
   document.querySelector('#voltar-etapa').addEventListener('click', () => mostrarTela('tela-acompanhamento'));
-  document.querySelector('#voltar-ativado').addEventListener('click', () => mostrarTela('tela-acompanhamento'));
+   document.querySelector('#voltar-ativado').addEventListener('click', () =>
+    mostrarTela(temEtapaAtiva ? 'tela-etapa-atual' : 'tela-acompanhamento')
+  );
 }
 
 async function iniciar() {
