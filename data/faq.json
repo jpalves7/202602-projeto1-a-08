@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": "ativacao",
+      "label": "Ativação",
+      "description": "Acompanhe a ativação do serviço",
+      "pageDescription": "Encontre respostas para ativar seu serviço Bulbe."
+    },
+    {
+      "id": "fatura",
+      "label": "Fatura",
+      "description": "Entenda sua conta de energia",
+      "pageDescription": "Entenda sua conta de energia."
+    },
+    {
+      "id": "pagamento",
+      "label": "Pagamento",
+      "description": "Prazos e formas de pagamento",
+      "pageDescription": "Veja prazos e formas de pagamento."
+    }
+  ],
+  "faqs": [
+    {
+      "id": "ativacao-conta",
+      "category": "ativacao",
+      "question": "Como faço para ativar minha conta?",
+      "answer": "Confirme seus dados cadastrais e acompanhe o processo pela área de ativação. Após a conclusão, você receberá uma confirmação do serviço.",
+      "tip": "Acompanhe o status na área de ativação."
+    },
+    {
+      "id": "ativacao-prazo",
+      "category": "ativacao",
+      "question": "Quanto tempo leva para o serviço ser ativado?",
+      "answer": "O prazo depende das etapas de ativação e da confirmação da distribuidora de energia. Consulte a previsão e o andamento na tela de acompanhamento da ativação."
+    },
+    {
+      "id": "ativacao-documentos",
+      "category": "ativacao",
+      "question": "Preciso de algum documento para ativar?",
+      "answer": "Confira os dados da unidade consumidora e os documentos solicitados durante a contratação. Se houver alguma pendência, a equipe de atendimento poderá orientar você."
+    },
+    {
+      "id": "ativacao-titular",
+      "category": "ativacao",
+      "question": "Posso mudar o titular da conta?",
+      "answer": "A alteração depende dos dados da unidade consumidora e do andamento da ativação. Entre em contato com o atendimento para verificar o procedimento adequado ao seu caso."
+    },
+    {
+      "id": "fatura-segunda-via",
+      "category": "fatura",
+      "question": "Como emitir a segunda via da fatura?",
+      "answer": "Na área de faturas, escolha a conta desejada e selecione a opção para consultar ou baixar a segunda via. Se ela não estiver disponível, fale com o atendimento."
+    },
+    {
+      "id": "fatura-formas-pagamento",
+      "category": "fatura",
+      "question": "Quais as formas de pagamento da fatura?",
+      "answer": "As opções previstas nesta demonstração são PIX e boleto. Confira na tela de pagamento quais estão disponíveis para a sua fatura."
+    },
+    {
+      "id": "fatura-valor",
+      "category": "fatura",
+      "question": "Por que o valor da fatura mudou?",
+      "answer": "O total pode variar conforme o consumo, o período faturado e os itens detalhados na conta. Abra a explicação da fatura para conferir cada componente."
+    },
+    {
+      "id": "pagamento-pix",
+      "category": "pagamento",
+      "question": "Posso pagar a fatura com PIX?",
+      "answer": "Quando o PIX estiver disponível, abra a tela de pagamento, copie o código e conclua o pagamento no aplicativo do seu banco. Confira o valor e os dados antes de confirmar."
+    },
+    {
+      "id": "pagamento-confirmacao",
+      "category": "pagamento",
+      "question": "Como confirmo que o pagamento foi aprovado?",
+      "answer": "Guarde o comprovante e consulte o status da fatura na área do cliente. A atualização pode levar algum tempo, conforme o meio de pagamento utilizado."
+    },
+    {
+      "id": "pagamento-vencimento",
+      "category": "pagamento",
+      "question": "O que acontece se eu pagar depois do vencimento?",
+      "answer": "Consulte as condições descritas na sua fatura e procure o atendimento para receber orientação sobre a regularização do pagamento."
+    }
+  ]
+}
