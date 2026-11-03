@@ -1,1 +1,31 @@
 
+{
+    "etapas": [
+        {
+            "titulo": "Contrato assinado",
+            "status": "concluida",
+            "data": "01/11/2026",
+            "descricao": "Seu contrato foi recebido e confirmado com sucesso."
+        },
+        {
+            "titulo": "Pedido enviado à Cemig",
+            "status": "ativa",
+            "previsao": "05/11/2026",
+            "descricao": "Estamos aguardando a confirmação da Cemig para dar continuidade à sua ativação."
+        },
+        {
+            "titulo": "Energia Bulbe ativa",
+            "status": "pendente",
+            "previsao": null,
+            "descricao": "Sua energia estará vinculada à Bulbe e você começará a aproveitar os benefícios."
+        },
+        {
+            "titulo": "1ª fatura gerada",
+            "status": "pendente",
+            "previsao": null,
+            "descricao": "Sua primeira fatura Bulbe será disponibilizada para acompanhamento."
+        }
+    ],
+    "primeira_fatura_prevista": "20/11/2026"
+}
+
