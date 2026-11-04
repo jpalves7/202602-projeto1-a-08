@@ -65,7 +65,7 @@ Os wireframes representam o planejamento visual da solução. A implementação 
 
 | Integrante | Responsabilidade |
 | --- | --- |
-| Pedro Paulo | Implementar a HU01 — Confirmação de Contatos |
+| Pedro Paulo | Implementar a HU01 — Como a Bulbe funciona (escopo revisto em 29/10; antes: Confirmação de Contatos) |
 | João Pedro Alves | Implementar a HU02 — Acompanhamento da Ativação |
 | Vitor Carrara | Implementar a HU03 — Explicação da Fatura |
 | Pedro Coelho | Implementar a HU04 — Pagamento da Primeira Fatura |
