@@ -28,3 +28,7 @@ export async function buscarFaturasDoCliente(clienteId) {
 export function buscarAtivacao() {
   return lerJSON('ativacao.json');
 }
+
+export function buscarComoFunciona() {
+  return lerJSON('como-funciona.json');
+}
