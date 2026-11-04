@@ -80,6 +80,7 @@
   flex: 1;
   flex-direction: column;
   margin: 0;
+  background: inherit; /* as .acoes-fixas herdam este fundo ao rolar sobre os cards */
 }
 
 .checklist {
