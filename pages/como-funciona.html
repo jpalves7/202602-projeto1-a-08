@@ -22,13 +22,15 @@
         <button type="button" class="botao-icone" aria-label="Notificações">
           <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
         </button>
-        <span class="avatar" aria-label="José Almeida">JS</span>
+        <span class="avatar" id="avatar-iniciais" aria-label="José Almeida">JS</span>
       </div>
     </header>
 
     <main class="app-conteudo app-conteudo-painel">
       <h1 class="titulo">Olá, <span class="cliente-nome">José</span>!</h1>
       <p class="subtitulo">Veja como a sua economia vai funcionar.</p>
+
+      <p class="erro" id="erro-como-funciona" role="alert" hidden></p>
 
       <h2 class="secao-titulo">Você vai receber duas contas</h2>
 
@@ -185,7 +187,7 @@
             </span>
           </label>
 
-          <p class="erro" id="erro-entendimento" hidden>Marque os três itens para continuar.</p>
+          <p class="erro" id="erro-entendimento" role="alert" hidden>Marque os três itens para continuar.</p>
         </fieldset>
 
         <div class="ajuda">
@@ -223,5 +225,6 @@
     </a>
   </nav>
 
+  <script type="module" src="../assets/js/como-funciona.js"></script>
 </body>
 </html>
