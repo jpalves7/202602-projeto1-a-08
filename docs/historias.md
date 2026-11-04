@@ -11,11 +11,11 @@
 ## Critérios de aceite
 
 ### HU01
-- [ ] Ao abrir a tela, o WhatsApp e o e-mail aparecem preenchidos com os dados de `cliente.json`.
-- [ ] Com um WhatsApp de menos de 11 dígitos, ao clicar em "Confirmar", aparece "Digite um celular válido com DDD" e o formulário não é enviado.
-- [ ] Com um e-mail sem "@" ou sem domínio, ao clicar em "Confirmar", aparece "Digite um e-mail válido".
-- [ ] Sem canal reserva escolhido (e-mail ou SMS), ao clicar em "Confirmar", aparece um aviso pedindo a escolha.
-- [ ] Com todos os campos válidos, ao clicar em "Confirmar", aparece "Contatos confirmados!" e um botão para "Acompanhar minha ativação".
+- [ ] Ao abrir a tela, aparece a explicação das duas contas (Cemig e Bulbe) e de quando o primeiro desconto começa.
+- [ ] Ao clicar em "Ver minha economia", aparecem os valores calculados a partir de `como-funciona.json`: conta antes da Bulbe, total com a Bulbe e economia estimada por mês e por ano.
+- [ ] Com algum dos três itens de entendimento desmarcado, ao clicar em "Confirmar e acompanhar ativação", aparece "Marque os três itens para continuar." e a tela não avança.
+- [ ] Com os três itens marcados, ao clicar em "Confirmar e acompanhar ativação", o usuário é levado à tela de ativação.
+- [ ] Ao clicar em "Tenho uma dúvida", o usuário é levado à Central de dúvidas.
 
 ### HU02
 - [ ] Ao abrir a tela, aparece uma linha do tempo com 4 etapas carregadas de `ativacao.json`: Contrato assinado, Pedido enviado à Cemig, Energia Bulbe ativa, 1ª fatura gerada.
