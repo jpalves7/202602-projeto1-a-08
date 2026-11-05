@@ -10,12 +10,12 @@
 - **Medos e dúvidas:** [ ]
 - **Canais que usa:** [ ]
 
-### 1. José Almeida — HU01 Confirmar contatos · [Pedro Paulo]
+### 1. José Almeida — HU01 Como a Bulbe funciona · [Pedro Paulo]
 
 - *Nome e idade:* José Almeida, 63 anos, aposentado, Betim – MG
-- *Contexto:* o filho contratou a Bulbe pelo celular para ele, depois de ver um anúncio de conta de luz mais barata. No cadastro, o filho colocou o próprio WhatsApp, e depois José ainda trocou de chip.
-- *Objetivo:* pagar menos de luz e receber os avisos no próprio celular, de um jeito simples.
-- *Medos e dúvidas:* "Ninguém me mandou nada, será que contratou mesmo?"; não sabe onde conferir ou corrigir o contato cadastrado.
+- *Contexto:* o filho contratou a Bulbe pelo celular para ele, depois de ver um anúncio de conta de luz mais barata. Como não acompanhou a contratação, José não sabe como a cobrança vai funcionar.
+- *Objetivo:* pagar menos de luz e entender, de um jeito simples, quanto vai pagar.
+- *Medos e dúvidas:* "Vou receber duas contas? Estou pagando a mais?"; "Será que fui enganado?"; pode cancelar ao estranhar a primeira fatura.
 - *Canais que usa:* WhatsApp (pouco); ligação telefônica; não usa e-mail.
 
 ### 2. Lucas Ferreira — HU02 Acompanhar ativação · [João Pedro Alves]
@@ -54,10 +54,28 @@
 
 ![Mapa de jornada](wireframes/jornada.png)
 
+O mapa apresenta os principais momentos da experiência dos novos clientes da Bulbe Energia, relacionando suas dificuldades às oportunidades de melhoria identificadas pelo squad.
+
 | Fase | Ações | Pontos de contato | Pensamentos | Emoção | Dor (com evidência da Bulbe) | Oportunidade |
 | --- | --- | --- | --- | --- | --- | --- |
-| [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| **1. Boas-vindas e entendimento do serviço — HU01** | O cliente realiza a contratação e tenta entender como a cobrança vai funcionar. | Site, WhatsApp e telefone. | "Vou receber duas contas? Quanto vou economizar de verdade?" | Insegurança e desconfiança. | Cancelamento por desconhecimento do produto. | Explicar o serviço, simular a economia e confirmar o entendimento. |
+| **2. Espera pela ativação — HU02** | O cliente acompanha o processo de ativação e aguarda o início dos benefícios. | Site, celular e WhatsApp. | "Por que ainda recebo a conta da Cemig? Minha contratação funcionou?" | Ansiedade e preocupação. | Clientes ficaram até 20 dias sem comunicação durante o onboarding. | Criar uma linha do tempo que apresente as etapas da ativação e a previsão da primeira fatura. |
+| **3. Recebimento da primeira fatura — HU03** | O cliente recebe a cobrança e tenta compreender os valores apresentados. | Fatura, site, e-mail e aplicativo bancário. | "Estou pagando duas vezes? O que significam esses créditos?" | Confusão e desconfiança. | A empresa identificou dificuldade dos clientes para compreender a primeira fatura. | Explicar a composição da cobrança em linguagem simples e destacar a economia obtida. |
+| **4. Pagamento da primeira fatura — HU04** | O cliente consulta o vencimento, escolhe uma forma de pagamento e organiza suas contas. | Site, Pix, boleto e aplicativo bancário. | "Quando preciso pagar? Onde encontro o código de pagamento?" | Preocupação e receio de atraso. | A inadimplência da primeira fatura chegou a 32,4%, contra 1,6% na carteira PF com mais de quatro meses. | Centralizar valor, vencimento e opções de pagamento e disponibilizar lembretes. |
+| **5. Esclarecimento de dúvidas durante a jornada — HU05** | O cliente procura respostas sobre ativação, fatura e pagamento. | Site, Central de Dúvidas e canais de atendimento. | "Preciso cancelar a Cemig? Quando vence? E se eu mudar de apartamento?" | Dúvida e insegurança. | As falhas de comunicação e a dificuldade de compreender o processo podem deixar o cliente sem informações importantes. | Criar uma Central de Dúvidas com categorias, perguntas expansíveis e ferramenta de pesquisa. |
 
-## Oportunidades registradas como Issues
+## Relação com as histórias de usuário
 
-- [ ] #[número] [título da oportunidade]
+As oportunidades identificadas foram transformadas em cinco histórias de usuário, documentadas no arquivo `docs/historias.md`.
+
+- **HU01:** Como a Bulbe funciona — Pedro Paulo.
+- **HU02:** Acompanhamento da ativação — João Pedro Alves.
+- **HU03:** Explicação da primeira fatura — Vitor Carrara.
+- **HU04:** Pagamento da primeira fatura — Pedro Coelho. Issue #8.
+- **HU05:** Central de Dúvidas — João Pedro Lanna. Issue #7.
+
+As histórias têm como objetivo melhorar a experiência inicial dos clientes, aumentar a clareza das informações e contribuir para o pagamento da primeira fatura.
+
+**Indicador principal:** inadimplência da primeira fatura.
+
+**Indicadores complementares:** entregabilidade das comunicações e retenção de novos clientes.

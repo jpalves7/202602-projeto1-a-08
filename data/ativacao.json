@@ -1,0 +1,42 @@
+{
+  "cliente": {
+    "iniciais": "JS"
+  },
+  "etapas": [
+    {
+      "titulo": "Cadastro recebido",
+      "status": "concluida"
+    },
+    {
+      "titulo": "Serviço explicado",
+      "status": "concluida"
+    },
+    {
+      "titulo": "Análise da distribuidora",
+      "status": "ativa",
+      "prazoDias": 60,
+      "subtitulo": "Seu pedido está sendo processado.",
+      "detalhes": [
+        {
+          "icone": "raio",
+          "titulo": "O que acontece agora?",
+          "texto": "A distribuidora está analisando a solicitação de ativação do serviço."
+        },
+        {
+          "icone": "info",
+          "titulo": "Você não precisa solicitar novamente",
+          "texto": "Acompanhe o status até a confirmação."
+        },
+        {
+          "icone": "check",
+          "titulo": "Próximo passo",
+          "texto": "Serviço ativado e confirmação enviada."
+        }
+      ]
+    },
+    {
+      "titulo": "Serviço ativado",
+      "status": "pendente"
+    }
+  ]
+}

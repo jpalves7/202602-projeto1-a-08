@@ -24,3 +24,11 @@ export async function buscarFaturasDoCliente(clienteId) {
   const faturas = await buscarFaturas();
   return faturas.filter((fatura) => fatura.clienteId === clienteId);
 }
+
+export function buscarAtivacao() {
+  return lerJSON('ativacao.json');
+}
+
+export function buscarComoFunciona() {
+  return lerJSON('como-funciona.json');
+}

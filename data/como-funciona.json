@@ -1,0 +1,12 @@
+{
+  "cliente": {
+    "nome": "José",
+    "nomeCompleto": "José Almeida",
+    "iniciais": "JA"
+  },
+  "simulacao": {
+    "contaAntes": 250,
+    "contaCemig": 40,
+    "descontoPercentual": 15
+  }
+}

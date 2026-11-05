@@ -3,7 +3,7 @@
 > Entregável da aula 20. Cada história nasce de uma oportunidade do mapa de jornada e vira uma Issue com o label `historia`.
 | ID | História | Oportunidade de origem | Prioridade | Issue |
 | --- | --- | --- | --- | --- |
-| HU01 | Como José, cliente novo que não está recebendo as mensagens da Bulbe, quero confirmar meu WhatsApp e meu e-mail e escolher um canal reserva para ter certeza de que vou receber os avisos sobre minha ativação e minha fatura. | Fase 2 (Boas-vindas): confirmar contatos e canal reserva — ~20% de falha na entrega por WhatsApp | alta | #[ ] |
+| HU01 | Como José, cliente novo que acabou de contratar, quero entender como funciona a cobrança da Bulbe e quanto vou economizar, confirmando que entendi antes de seguir, para não estranhar a primeira fatura nem cancelar achando que fui enganado. | Fase 2 (Boas-vindas): explicar o serviço, simular a economia e confirmar o entendimento — cancelamento por desconhecimento do produto | alta | #[ ] |
 | HU02 | Como Lucas, cliente novo que ainda recebe conta da Cemig, quero ver em que etapa está a minha ativação e quando vem a minha 1ª fatura para não achar que a contratação deu errado durante a espera. | Fase 3 (Espera da ativação): linha do tempo da ativação — até 20 dias sem comunicação | alta | #[ ] |
 | HU03 | Como Ana Paula, cliente que recebeu a 1ª fatura da Bulbe, quero ver cada parte da fatura explicada em linguagem simples e quanto economizei para entender o que estou pagando e não achar que estou pagando duas vezes. | Fase 4 (Chegada da 1ª fatura): fatura explicada item por item — fatura difícil de entender | média | #[ ] |
 | HU04 | Como Mariana, cliente com a 1ª fatura aberta e renda variável, quero ver o valor, o vencimento e as formas de pagamento em um só lugar e ativar um lembrete para pagar sem atraso. | Fase 5 (Pagamento): PIX, boleto e lembrete — 32,4% de inadimplência na 1ª fatura | alta | #[ ] |
@@ -11,11 +11,11 @@
 ## Critérios de aceite
 
 ### HU01
-- [ ] Ao abrir a tela, o WhatsApp e o e-mail aparecem preenchidos com os dados de `cliente.json`.
-- [ ] Com um WhatsApp de menos de 11 dígitos, ao clicar em "Confirmar", aparece "Digite um celular válido com DDD" e o formulário não é enviado.
-- [ ] Com um e-mail sem "@" ou sem domínio, ao clicar em "Confirmar", aparece "Digite um e-mail válido".
-- [ ] Sem canal reserva escolhido (e-mail ou SMS), ao clicar em "Confirmar", aparece um aviso pedindo a escolha.
-- [ ] Com todos os campos válidos, ao clicar em "Confirmar", aparece "Contatos confirmados!" e um botão para "Acompanhar minha ativação".
+- [ ] Ao abrir a tela, aparece a explicação das duas contas (Cemig e Bulbe) e de quando o primeiro desconto começa.
+- [ ] Ao clicar em "Ver minha economia", aparecem os valores calculados a partir de `como-funciona.json`: conta antes da Bulbe, total com a Bulbe e economia estimada por mês e por ano.
+- [ ] Com algum dos três itens de entendimento desmarcado, ao clicar em "Confirmar e acompanhar ativação", aparece "Marque os três itens para continuar." e a tela não avança.
+- [ ] Com os três itens marcados, ao clicar em "Confirmar e acompanhar ativação", o usuário é levado à tela de ativação.
+- [ ] Ao clicar em "Tenho uma dúvida", o usuário é levado à Central de dúvidas.
 
 ### HU02
 - [ ] Ao abrir a tela, aparece uma linha do tempo com 4 etapas carregadas de `ativacao.json`: Contrato assinado, Pedido enviado à Cemig, Energia Bulbe ativa, 1ª fatura gerada.
