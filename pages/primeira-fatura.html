@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulbe | Sua primeira fatura</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/primeira-fatura.css">
+</head>
+<body class="app">
+
+  <!-- HU03 · Tela 1: sua primeira fatura (wireframe hu03-01) -->
+  <section id="tela-fatura" class="tela">
+    <header class="app-topo-escuro">
+      <button type="button" class="botao-icone" aria-label="Abrir menu">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <a href="../index.html" class="logo" aria-label="Bulbe, página inicial">
+        bulbe<span class="logo-tracos" aria-hidden="true"></span>
+      </a>
+      <div class="app-topo-acoes">
+        <button type="button" class="botao-icone" aria-label="Notificações">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+        </button>
+        <span class="avatar" id="avatar-iniciais" aria-label="Ana Paula Santos">AP</span>
+      </div>
+    </header>
+
+    <main class="app-conteudo app-conteudo-painel">
+      <h1 class="titulo">Sua primeira fatura</h1>
+      <p class="subtitulo">Confira o valor e o vencimento.</p>
+
+      <p class="erro" id="erro-fatura" role="alert" hidden></p>
+
+      <div class="card fatura-destaque">
+        <div class="fatura-cabecalho">
+          <div class="fatura-referencia">
+            <p class="card-titulo" id="mes-referencia">Outubro/2026</p>
+            <p class="card-texto">Vence em <span class="data-vencimento">15/11/2026</span></p>
+          </div>
+          <span class="etiqueta" id="status-fatura">em aberto</span>
+        </div>
+
+        <p class="fatura-valor" id="valor-total">R$ 187,40</p>
+        <p class="fatura-consumo">Consumo do mês: <strong id="consumo-kwh">200 kWh</strong></p>
+
+        <p class="faixa-economia">
+          <span>Você economizou <span id="valor-economia">R$ 37,20</span> este mês</span>
+        </p>
+        <p class="nota fatura-comparacao">Sem a Bulbe, a conta seria <span id="valor-sem-bulbe">R$ 224,60</span>.</p>
+      </div>
+
+      <h2 class="secao-titulo">Resumo do valor</h2>
+
+      <div class="card">
+        <ul class="resumo" id="lista-resumo">
+          <!-- Preenchido pelo primeira-fatura.js a partir de fatura.json -->
+        </ul>
+        <p class="resumo-total">
+          <span>Total a pagar</span>
+          <strong class="valor-total">R$ 187,40</strong>
+        </p>
+      </div>
+
+      <div class="acoes-fixas">
+        <button type="button" class="botao botao-primario" id="botao-entender">Entender minha fatura</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- HU03 · Tela 2: composição da fatura (wireframe hu03-02) -->
+  <section id="tela-composicao" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-composicao" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Composição da fatura</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
+
+    <main class="app-conteudo">
+      <h1 class="titulo">De onde vem o valor?</h1>
+      <p class="subtitulo">Entenda sua primeira fatura.</p>
+
+      <ul class="lista-itens" id="lista-composicao">
+        <!-- Preenchido pelo primeira-fatura.js a partir de fatura.json -->
+      </ul>
+
+      <div class="card card-com-icone card-total">
+        <span class="icone-circulo">
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </span>
+        <div class="item-info">
+          <p class="card-titulo">Total da fatura</p>
+          <p class="card-texto">Vencimento <span class="data-vencimento">15/11/2026</span></p>
+        </div>
+        <strong class="item-valor valor-total">R$ 187,40</strong>
+      </div>
+
+      <p class="nota">Valores fictícios para simulação.</p>
+
+      <div class="acoes-fixas">
+        <button type="button" class="botao botao-primario" id="botao-termos">Entender os termos</button>
+      </div>
+    </main>
+  </section>
+
+  <!-- HU03 · Tela 3: termos da fatura (wireframe hu03-03) -->
+  <section id="tela-termos" class="tela" hidden>
+    <header class="app-topo">
+      <button type="button" class="botao-icone" id="voltar-termos" aria-label="Voltar">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><polyline points="9,14 4,9 9,4"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg>
+      </button>
+      <h2 class="app-topo-titulo">Termos da fatura</h2>
+      <span class="logo logo-pequeno" aria-hidden="true">bulbe<span class="logo-tracos"></span></span>
+    </header>
+
+    <main class="app-conteudo">
+      <h1 class="titulo">Entenda os termos</h1>
+      <p class="subtitulo">Toque em um item para ver mais detalhes.</p>
+
+      <ul class="lista-itens" id="lista-termos">
+        <!-- Preenchido pelo primeira-fatura.js a partir de fatura.json -->
+      </ul>
+
+      <div class="acoes-fixas">
+        <!-- A tela de pagamento é a HU04. Ajustar o link se o nome do arquivo for outro. -->
+        <a href="pagamento.html" class="botao botao-primario">
+          Pagar agora
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13,6 19,12 13,18"/></svg>
+        </a>
+      </div>
+    </main>
+  </section>
+
+  <!-- Barra de navegação inferior (igual em todos os wireframes) -->
+  <nav class="nav-inferior" aria-label="Navegação principal">
+    <a href="como-funciona.html" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg>
+      Início
+    </a>
+    <a href="primeira-fatura.html" class="nav-item ativo" aria-current="page">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="15" y2="16"/></svg>
+      Fatura
+    </a>
+    <a href="hu05.html" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5v.7"/><line x1="12" y1="17" x2="12" y2="17"/></svg>
+      Dúvidas
+    </a>
+    <a href="#" class="nav-item">
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+      Perfil
+    </a>
+  </nav>
+
+  <script type="module" src="../assets/js/primeira-fatura.js"></script>
+</body>
+</html>
