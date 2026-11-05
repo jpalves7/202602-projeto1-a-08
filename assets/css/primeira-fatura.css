@@ -1,5 +1,13 @@
 /* Estilos específicos da HU03 · Sua primeira fatura */
 
+/* Logo em imagem (assets/img), nos mesmos tamanhos da HU05 */
+.logo-img {
+  display: block;
+  width: 82px;
+  height: auto;
+}
+.logo-pequeno .logo-img { width: 72px; }
+
 /* Tela 1: card principal da fatura */
 .fatura-destaque {
   padding: 1rem;
