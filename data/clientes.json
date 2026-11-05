@@ -34,7 +34,7 @@
     "emailConfirmado": false,
     "consumoMedioKwh": 180,
     "descontoPercentual": 12
-  }
+  },
     {
     "id": 4,
     "nome": "Ana Ribeiro",
@@ -46,7 +46,7 @@
     "emailConfirmado": false,
     "consumoMedioKwh": 180,
     "descontoPercentual": 12
-  }
+  },
     {
     "id": 5,
     "nome": "Beatriz Lima",
