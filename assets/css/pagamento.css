@@ -1,0 +1,151 @@
+
+/* ==========================================
+   HU04 - Pagamento da fatura
+   Estilos especificos da pagina
+   ========================================== */
+
+/* Resumo da fatura */
+.pagamento-resumo {
+  background: var(--cor-lilas-fundo);
+  border-color: var(--cor-lilas-borda);
+}
+
+.pagamento-valor {
+  margin: 0.25rem 0 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+}
+
+/* Valor, vencimento e situacao */
+.pagamento-informacoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.pagamento-informacoes p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  font-size: 0.8125rem;
+}
+
+.pagamento-informacoes span {
+  color: var(--cor-texto-suave);
+}
+
+.pagamento-informacoes strong {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+.pagamento-prazo {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--cor-primaria);
+}
+
+/* Opcoes de pagamento */
+.pagamento-opcoes {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.opcao-pagamento {
+  flex: 1;
+  padding: 0.875rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  background: #fff;
+  color: var(--cor-texto-suave);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.opcao-pagamento.ativo {
+  border-color: var(--cor-primaria);
+  background: var(--cor-lilas);
+  color: var(--cor-primaria);
+}
+
+.opcao-pagamento:hover {
+  border-color: var(--cor-primaria);
+}
+
+/* Codigo PIX ou boleto */
+.codigo-pagamento {
+  margin: 1rem 0;
+  padding: 0.875rem;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+  user-select: all;
+}
+
+/* Mensagem apos copiar codigo */
+.mensagem-copia {
+  margin: 0.75rem 0 0;
+  color: var(--cor-sucesso);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Lembrete de pagamento */
+.titulo-lembrete {
+  margin-top: 1.5rem;
+}
+
+#ativar-lembrete {
+  margin-top: 1rem;
+}
+
+.mensagem-lembrete {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem;
+  border: 1px solid var(--cor-sucesso-borda);
+  border-radius: 8px;
+  background: var(--cor-sucesso-fundo);
+  color: var(--cor-sucesso);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+/* Espacamento entre textos dos cards */
+#area-pix .card-texto,
+#area-boleto .card-texto,
+.titulo-lembrete + .card .card-texto {
+  margin-top: 0.5rem;
+}
+
+/* Destaque do teclado para acessibilidade */
+.opcao-pagamento:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 360px) {
+  .pagamento-valor {
+    font-size: 1.75rem;
+  }
+
+  .pagamento-informacoes {
+    gap: 0.5rem;
+  }
+
+  .opcao-pagamento {
+    padding: 0.75rem 0.5rem;
+  }
+}
