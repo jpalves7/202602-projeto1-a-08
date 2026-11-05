@@ -1,0 +1,63 @@
+{
+  "cliente": {
+    "nome": "Ana Paula",
+    "nomeCompleto": "Ana Paula Santos",
+    "iniciais": "AP"
+  },
+  "fatura": {
+    "referencia": "2026-10",
+    "vencimento": "2026-11-15",
+    "consumoKwh": 200,
+    "status": "em aberto",
+    "contaSemBulbe": 224.6,
+    "itens": [
+      {
+        "id": "consumo",
+        "icone": "raio",
+        "nome": "Consumo de energia",
+        "resumo": "Valor da energia usada no mês",
+        "valor": 160.0
+      },
+      {
+        "id": "creditos",
+        "icone": "check",
+        "nome": "Créditos Bulbe",
+        "resumo": "Seu desconto com a energia Bulbe",
+        "valor": -37.2
+      },
+      {
+        "id": "tributos",
+        "icone": "recibo",
+        "nome": "Tributos e encargos",
+        "resumo": "Cobranças adicionais da conta",
+        "valor": 64.6
+      }
+    ]
+  },
+  "termos": [
+    {
+      "icone": "raio",
+      "titulo": "Consumo de energia",
+      "resumo": "Energia considerada no período da conta.",
+      "detalhe": "É quanto a sua casa usou de energia no mês, medido em kWh (quilowatt-hora). Neste mês foram {consumoKwh} kWh."
+    },
+    {
+      "icone": "check",
+      "titulo": "Créditos Bulbe",
+      "resumo": "Desconto aplicado pela energia que a Bulbe gerou para você.",
+      "detalhe": "A Bulbe gera energia limpa e ela vira crédito na sua conta. Por isso o valor aparece com sinal de menos: ele diminui o total. Você não paga duas vezes."
+    },
+    {
+      "icone": "recibo",
+      "titulo": "Tributos e encargos",
+      "resumo": "Impostos e taxas que fazem parte de toda conta de luz.",
+      "detalhe": "São cobranças obrigatórias, como ICMS e taxa de iluminação pública. Elas existem com ou sem a Bulbe."
+    },
+    {
+      "icone": "calendario",
+      "titulo": "Vencimento",
+      "resumo": "Data limite para pagar a conta sem juros.",
+      "detalhe": "Pague até {vencimento} para evitar multa e juros. Depois dessa data, o valor aumenta."
+    }
+  ]
+}
