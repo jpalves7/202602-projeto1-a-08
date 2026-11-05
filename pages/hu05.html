@@ -13,39 +13,22 @@
     <div class="status-bar" aria-hidden="true">
       <span>9:41</span>
       <span class="status-icons">
-        <svg viewBox="0 0 24 16" class="status-signal">
-          <path d="M2 14V11M7 14V8M12 14V5M17 14V2" />
-        </svg>
+        <svg viewBox="0 0 24 16" class="status-signal"><path d="M2 14V11M7 14V8M12 14V5M17 14V2" /></svg>
         <span>4G</span>
-        <svg viewBox="0 0 26 14" class="status-battery">
-          <rect x="1" y="1" width="21" height="12" rx="3"/>
-          <path d="M24 5v4"/>
-          <rect x="3" y="3" width="16" height="8" rx="1.5" class="battery-fill"/>
-        </svg>
+        <svg viewBox="0 0 26 14" class="status-battery"><rect x="1" y="1" width="21" height="12" rx="3"/><path d="M24 5v4"/><rect x="3" y="3" width="16" height="8" rx="1.5" class="battery-fill"/></svg>
       </span>
     </div>
 
     <header class="home-header" id="home-header">
       <button class="icon-button menu-button" type="button" aria-label="Abrir menu" title="Menu">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
-
       <a class="brand brand-light" href="#inicio" aria-label="Bulbe, início">
-        <svg class="brand-logo" viewBox="0 0 88 30" role="img" aria-label="Bulbe">
-          <text x="1" y="24" class="brand-word">bulbe</text>
-          <path d="M63 5h8" class="brand-ray ray-green" />
-          <path d="M65 10h10" class="brand-ray ray-blue" />
-          <path d="M63 15h8" class="brand-ray ray-orange" />
-        </svg>
+       <img class="brand-logo" src="../assets/img/bulbe-logo-branca.png" alt="Logo Bulbe">
       </a>
-
       <div class="header-actions">
         <button class="icon-button" type="button" aria-label="Notificações" title="Notificações">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/>
-          </svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
         </button>
         <span class="avatar" aria-label="Perfil de Beatriz">BS</span>
       </div>
@@ -53,20 +36,11 @@
 
     <header class="inner-header" id="inner-header" hidden>
       <button class="icon-button back-button" id="back-button" type="button" aria-label="Voltar">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m15 18-6-6 6-6M9 12h12"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6M9 12h12"/></svg>
       </button>
-
       <h1>Central de Dúvidas</h1>
-
       <a class="brand brand-small" href="#inicio" aria-label="Bulbe, início">
-        <svg class="brand-logo" viewBox="0 0 88 30" role="img" aria-label="Bulbe">
-          <text x="1" y="24" class="brand-word">bulbe</text>
-          <path d="M63 5h8" class="brand-ray ray-green" />
-          <path d="M65 10h10" class="brand-ray ray-blue" />
-          <path d="M63 15h8" class="brand-ray ray-orange" />
-        </svg>
+      <img class="brand-logo" src="../assets/img/bulbe-logo-azul.png" alt="Logo Bulbe">
       </a>
     </header>
 
@@ -75,41 +49,25 @@
         <div class="home-content">
           <h1 id="greeting-title">Olá, Beatriz!</h1>
           <p class="lead">Como podemos te ajudar hoje?</p>
-
           <form class="search-form" id="home-search" role="search">
             <label class="sr-only" for="home-query">Busque sua dúvida</label>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="10.8" cy="10.8" r="6.8"/>
-              <path d="m16 16 4 4"/>
-            </svg>
-            <input
-              id="home-query"
-              type="search"
-              placeholder="Busque sua dúvida aqui..."
-              autocomplete="off"
-            >
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg>
+            <input id="home-query" type="search" placeholder="Busque sua dúvida aqui..." autocomplete="off">
           </form>
 
           <div class="section-heading-row">
             <h2>Categorias</h2>
           </div>
-
           <div class="category-list" id="category-list" aria-live="polite"></div>
 
           <aside class="contact-card">
             <span class="contact-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.2-4.5A8.5 8.5 0 1 1 20.5 11.5Z"/>
-                <path d="M8.7 8.2c.4 2.4 2.3 4.3 4.7 4.7l1.2-1.2 2 1c-.1 1.4-1.2 2.3-2.6 2.1-3.4-.6-6.2-3.3-6.8-6.8-.2-1.4.7-2.5 2.1-2.6l1 2-1.6 1.8Z"/>
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.2-4.5A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.7 8.2c.4 2.4 2.3 4.3 4.7 4.7l1.2-1.2 2 1c-.1 1.4-1.2 2.3-2.6 2.1-3.4-.6-6.2-3.3-6.8-6.8-.2-1.4.7-2.5 2.1-2.6l1 2-1.6 1.8Z"/></svg>
             </span>
-
             <div class="contact-copy">
               <strong>Ainda com dúvidas?</strong>
               <span>Nosso time pode ajudar você.</span>
-              <a href="mailto:atendimento@bulbe.example?subject=Central%20de%20D%C3%BAvidas">
-                Falar com atendimento <span aria-hidden="true">→</span>
-              </a>
+              <a href="mailto:atendimento@bulbe.example?subject=Central%20de%20D%C3%BAvidas">Falar com atendimento <span aria-hidden="true">→</span></a>
             </div>
           </aside>
         </div>
@@ -118,50 +76,31 @@
       <section class="category-view" id="category-view" hidden aria-live="polite"></section>
       <section class="results-view" id="results-view" hidden aria-labelledby="results-title"></section>
       <section class="empty-view" id="empty-view" hidden aria-labelledby="empty-title"></section>
-
       <section class="load-error" id="load-error" hidden role="alert">
         <h2>Não foi possível carregar as dúvidas</h2>
-        <p>
-          Confira se a pasta <code>data/faq.json</code> está no projeto
-          e abra a página pelo Live Server.
-        </p>
+        <p>Confira se a pasta <code>data/faq.json</code> está no projeto e abra a página pelo Live Server.</p>
       </section>
     </main>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
       <a class="nav-item" href="../index.html" title="Início">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
         <span>Início</span>
       </a>
-
       <button class="nav-item" type="button" disabled title="Tela de fatura ainda não implementada">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M6 3h9l4 4v14H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/>
-          <path d="M14 3v5h5M8 12h8M8 16h8"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="M14 3v5h5M8 12h8M8 16h8"/></svg>
         <span>Fatura</span>
       </button>
-
       <a class="nav-item active" href="#inicio" aria-current="page">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="9"/>
-          <path d="M9.6 9a2.5 2.5 0 1 1 4.5 1.5c-1.1 1.2-2.1 1.3-2.1 3M12 17.3v.1"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 1 1 4.5 1.5c-1.1 1.2-2.1 1.3-2.1 3M12 17.3v.1"/></svg>
         <span>Dúvidas</span>
       </a>
-
       <button class="nav-item" type="button" disabled title="Tela de perfil ainda não implementada">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 21a8 8 0 0 1 16 0"/>
-        </svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
         <span>Perfil</span>
       </button>
     </nav>
   </div>
-
   <script type="module" src="../assets/js/hu05.js"></script>
 </body>
 </html>
