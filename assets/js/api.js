@@ -32,3 +32,7 @@ export function buscarAtivacao() {
 export function buscarComoFunciona() {
   return lerJSON('como-funciona.json');
 }
+
+export function buscarFatura() {
+  return lerJSON('fatura.json');
+}
