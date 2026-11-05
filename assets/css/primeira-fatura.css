@@ -1,0 +1,154 @@
+/* Estilos específicos da HU03 · Sua primeira fatura */
+
+/* Tela 1: card principal da fatura */
+.fatura-destaque {
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(8, 6, 141, 0.06);
+}
+
+.fatura-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Barrinha azul à esquerda do mês, como no wireframe */
+.fatura-referencia {
+  padding-left: 0.625rem;
+  border-left: 3px solid var(--cor-primaria);
+}
+.fatura-referencia .card-titulo { font-size: 1rem; }
+.fatura-referencia .card-texto { font-size: 0.75rem; }
+
+.etiqueta {
+  padding: 0.25rem 0.625rem;
+  border-radius: 999px;
+  background: var(--cor-lilas);
+  color: #2f6fed;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.fatura-valor {
+  margin: 0.75rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--cor-primaria);
+}
+
+.fatura-consumo {
+  margin: 0.125rem 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--cor-texto-suave);
+}
+
+/* Faixa verde "Você economizou R$ X este mês" */
+.faixa-economia {
+  margin: 0;
+  padding: 0.5rem 0.875rem;
+  border-radius: 8px;
+  background: var(--cor-sucesso);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.fatura-comparacao { text-align: left; }
+
+/* Tela 1: resumo do valor */
+.resumo {
+  margin: 0;
+  padding: 0 0 0.625rem;
+  list-style: none;
+  border-bottom: 1px solid var(--cor-borda);
+}
+.resumo li,
+.resumo-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+}
+.resumo li { color: var(--cor-texto-suave); }
+.resumo li strong { color: var(--cor-primaria); }
+
+.resumo-total {
+  margin: 0;
+  padding-top: 0.75rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+}
+
+/* Telas 2 e 3: lista de itens */
+.lista-itens {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-info { flex: 1; }
+
+.item-valor {
+  align-self: center;
+  font-size: 0.9375rem;
+  color: var(--cor-primaria);
+  white-space: nowrap;
+}
+.item-valor.negativo { color: var(--cor-sucesso); }
+
+/* Tela 2: card do total em azul escuro */
+.card-total {
+  border-color: var(--cor-primaria);
+  background: var(--cor-primaria);
+}
+.card-total .card-titulo,
+.card-total .card-texto,
+.card-total .item-valor { color: #fff; }
+.card-total .item-valor { font-size: 1.125rem; }
+.card-total .icone-circulo {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* Tela 3: termos que abrem e fecham */
+.termo { padding: 0; }
+
+.termo-botao {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 0;
+  border-radius: var(--raio);
+  background: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.termo-botao:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+.termo-botao .card-titulo,
+.termo-botao .card-texto { display: block; }
+
+.termo-seta {
+  align-self: center;
+  color: var(--cor-texto-apagado);
+  transition: transform 0.2s;
+}
+.termo-botao[aria-expanded="true"] .termo-seta { transform: rotate(180deg); }
+.termo:has([aria-expanded="true"]) { border-color: var(--cor-primaria); }
+
+.termo-detalhe {
+  margin: 0;
+  padding: 0 1rem 0.875rem calc(1rem + 36px + 0.875rem); /* alinha com o texto, depois do ícone */
+  font-size: 0.8125rem;
+  color: var(--cor-texto);
+}
