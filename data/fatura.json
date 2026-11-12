@@ -6,7 +6,7 @@
   },
   "fatura": {
     "referencia": "2026-10",
-    "vencimento": "2026-11-15",
+    "vencimento": "2026-17-15",
     "consumoKwh": 200,
     "status": "em aberto",
     "contaSemBulbe": 224.6,
