@@ -4,7 +4,7 @@
 **Instituição:** Ibmec BH  
 **Turma:** A — Squad 08  
 **Sprint:** Sprint 1 — 12/10 a 23/10/2026  
-**Data da apresentação:** [22/10]
+**Data da apresentação:** 22/10/2026
 
 ## 1. Objetivo da Sprint
 
@@ -51,7 +51,7 @@ As telas foram planejadas com foco em dispositivos móveis, considerando o celul
 
 ## 5. Feedback recebido na Sprint Review I
 
-[Preencher após a apresentação com os comentários, sugestões e correções solicitados pelo professor. Se não houve feedback específico, registrar isso explicitamente.]
+Não houve feedback específico registrado na apresentação.
 
 ## 6. Pendências e pontos de melhoria
 
